@@ -1,0 +1,147 @@
+h1, h2, h3, h4, h5, p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+@media(min-width: 1360px) {
+    .main{
+        width: 1360px;
+    }
+}
+
+.main {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.post-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.post-wrapper .vote-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 30px;
+    background-color: rgb(240, 240, 240);
+    margin-right: -10px;
+    border-radius: 10px 0 0 10px;
+    font-size: 16pt;
+    font-weight: 500;
+}
+
+.post-wrapper .vote-info button {
+    background-color: white;
+    font-size: 20pt;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 5px;
+}
+
+.post-wrapper .vote-info .vote-count{
+    text-align: center;
+}
+
+.post-wrapper .vote-info .vote-up, .post-wrapper .vote-info .vote-down{
+    margin-top: 10px;
+}
+.post {
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    background-color: white;
+}
+
+.post .vote-info {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.post .user-info {
+    padding: 10px 50px;
+}
+
+.post .post-context .post-title{
+    padding: 10px 50px;
+}
+.post .post-context .post-description{
+    padding: 10px 50px;
+}
+.post .post-context img{
+    width: 100%!important;
+    height: auto;
+}
+
+.post .user-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.post .user-info div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post .user-info div span {
+    padding: 0px 10px;
+}
+
+.post .user-info .user-name span{
+    font-size: 20pt;
+    font-weight: 500;
+}
+
+.post .user-info .user-avatar img{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.post .user-info .post-time {
+    color: gray;
+    font-size: 15pt;
+}
+
+.post .post-info {
+    padding: 30px 50px;
+    font-size: 16pt;
+    color: gray;
+}
+
+.post .post-info .comment {
+    display: inline-block;
+}
+
+.post .post-info .comment .comment-count{
+    padding-left: 15px;
+}
+
+.post .post-info .share {
+    margin-left: 30px;
+    display: inline-block;
+}
+.post .post-info .share span{
+    padding-left: 15px;
+}
+
+.post .post-info .more {
+    display: inline-block;
+    float: right;
+}
+
+.infinite-scroll-component::-webkit-scrollbar {
+    width: 20px;
+} 
+.infinite-scroll-component::-webkit-scrollbar-track {
+    background-color:  rgb(6, 159, 173);
+    border: 8px solid white;
+    /* background: linear-gradient(); */
+}
+    
+.infinite-scroll-component::-webkit-scrollbar-thumb {
+    background: rgb(6, 159, 173);
+    border-radius: 10px;
+}
+
