@@ -5,8 +5,7 @@ class PostItem extends Component {
     constructor(props) {
         super(props);
     }
-    render() { 
-        const post_image = require('../images/1.jpg')
+    render() {         
         return (
             <div className="post-wrapper">
                 <div className="vote-info-wrapper">
