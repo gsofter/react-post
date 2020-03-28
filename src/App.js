@@ -8,7 +8,7 @@ export default class App extends React.Component {
   constructor(props) {
     super(props)
     this.loadMore = this.loadMore.bind(this)
-    this.state = {posts: []}
+    this.state = {posts: [], hasMore: true}
   }
   componentDidMount() {
     // do some paginated fetch
@@ -31,10 +31,13 @@ export default class App extends React.Component {
   }
 
   loadMore() {
-    console.log('loadmore')
+    if(this.state.posts.length >= 50) {
+      this.setState({hasMore: false})
+      return;
+    }
     let new_post = {
-      title: "asddfsdfsdfdsf",
-      description: "asdfdsdfsdfsdfsdfsd",
+      title: "PROJECT TITLE " + this.state.posts.length,
+      description: "Project description " + this.state.posts.length,
       image_url: "/images/1.jpg",
       vote_count: 0,
     }
@@ -59,13 +62,11 @@ export default class App extends React.Component {
     return (
       <div className="main">
         <InfiniteScroll
-          dataLength={1}
+          dataLength={this.state.posts.length}
           pageStart={0}
           width={100}
-          height={1000}
           next={this.loadMore}
-          
-          hasMore={true}
+          hasMore={this.state.hasMore}
           endMessage={
             <p style={{textAlign: 'center'}}>
               <b>Yay! You have seen it all</b>

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import '@fortawesome/fontawesome-free/css/all.css'
-
 class PostItem extends Component {
     // eslint-disable-next-line no-useless-constructor
     constructor(props) {
         super(props);
     }
     render() { 
+        const post_image = require('../images/1.jpg')
         return (
             <div className="post-wrapper">
                 <div className="vote-info-wrapper">
